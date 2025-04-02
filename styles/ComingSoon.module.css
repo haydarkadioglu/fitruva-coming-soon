@@ -222,3 +222,52 @@
     font-size: 1rem;
   }
 }
+
+/* Force light mode colors regardless of system preferences */
+:global(:root) {
+  color-scheme: light only;
+}
+
+:global(html),
+:global(body) {
+  background-color: white;
+  color: black;
+}
+
+:global(body) {
+  color-scheme: light;
+}
+
+/* Override dark mode styles */
+@media (prefers-color-scheme: dark) {
+  :global(html),
+  :global(body) {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  .container {
+    background-color: white;
+    color: black;
+  }
+  
+  .footer {
+    border-top-color: #eaeaea;
+  }
+  
+  .input {
+    border-color: #ccc;
+    background-color: white;
+    color: black;
+  }
+  
+  /* Maintain button colors */
+  .button {
+    background-color: #0070f3;
+    color: white;
+  }
+  
+  .button:hover {
+    background-color: #0051b3;
+  }
+}
