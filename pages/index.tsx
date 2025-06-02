@@ -15,7 +15,7 @@ export default function ComingSoon() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
 
-  const launchDate = new Date('July 1, 2025 00:00:00').getTime();
+  const launchDate = new Date('September 1, 2025 00:00:00').getTime();
 
   useEffect(() => {
     const timer = setInterval(() => {
